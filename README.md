@@ -1,4 +1,4 @@
-# RIZZ: RSS Information Zone Zapper 🚀
+# RIZZ: RSS Information Zone Zapper
 
 Because AI content shouldn't be complicated
 
