@@ -45,55 +45,6 @@ Use the `ai:` namespace (`xmlns:ai="http://xai.org/RIZZ-namespace"`) for AI meta
 - `<ai:context>`: AI prompt or context (e.g., `<ai:context>Summarize for AI developers</ai:context>`)
 - `<ai:dataQuality>`: Data quality score (e.g., `<ai:dataQuality>85</ai:dataQuality>`, 0-100)
 
-## 🆕 JSON-LD ENHANCEMENT (Optional)
-
-### Purpose
-
-- Enhance semantic richness and interoperability of RSS feeds.
-- Provide structured data that can be easily interpreted by AI bots and other systems.
-
-### Implementation
-
-- Embed JSON-LD within the `<item>` elements to provide additional structured data.
-
-### Example RIZZ Feed with JSON-LD
-
-```xml
-<rss version="2.0" xmlns:ai="http://xai.org/RIZZ-namespace">
-  <channel>
-    <title>AI News Feed</title>
-    <link>https://example.com/ai-news</link>
-    <description>AI updates for bots</description>
-    <item>
-      <title>AI Reasoning Breakthrough</title>
-      <link>https://example.com/news/reasoning</link>
-      <description>New AI logic techniques.</description>
-      <pubDate>Mon, 10 Mar 2025 01:45:00 EDT</pubDate>
-      <ai:model>Grok, GPT</ai:model>
-      <ai:context>Summarize for developers</ai:context>
-      <ai:dataQuality>90</ai:dataQuality>
-      <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "AI Reasoning Breakthrough",
-        "url": "https://example.com/news/reasoning",
-        "datePublished": "2025-03-10T01:45:00-04:00",
-        "description": "New AI logic techniques.",
-        "author": {
-          "@type": "Organization",
-          "name": "Example News"
-        },
-        "aiModel": ["Grok", "GPT"],
-        "aiContext": "Summarize for developers",
-        "aiDataQuality": 90
-      }
-      </script>
-    </item>
-  </channel>
-</rss>
-```
-
 ## 🤝 THE RIZZ PROMISE:
 
 ### OPEN
@@ -203,6 +154,56 @@ Use `<ai:dataQuality>` to ensure only high-quality data is consumed (e.g., >70 f
   <ai:model>Grok, SafeGPT</ai:model>  <!-- Only safe or compatible models -->
   <ai:dataQuality>95</ai:dataQuality> <!-- High-quality, trusted data -->
 </item>
+```
+
+
+## 🆕 JSON-LD ENHANCEMENT (Optional)
+
+### Purpose
+
+- Enhance semantic richness and interoperability of RSS feeds.
+- Provide structured data that can be easily interpreted by AI bots and other systems.
+
+### Implementation
+
+- Embed JSON-LD within the `<item>` elements to provide additional structured data.
+
+### Example RIZZ Feed with JSON-LD
+
+```xml
+<rss version="2.0" xmlns:ai="http://xai.org/RIZZ-namespace">
+  <channel>
+    <title>AI News Feed</title>
+    <link>https://example.com/ai-news</link>
+    <description>AI updates for bots</description>
+    <item>
+      <title>AI Reasoning Breakthrough</title>
+      <link>https://example.com/news/reasoning</link>
+      <description>New AI logic techniques.</description>
+      <pubDate>Mon, 10 Mar 2025 01:45:00 EDT</pubDate>
+      <ai:model>Grok, GPT</ai:model>
+      <ai:context>Summarize for developers</ai:context>
+      <ai:dataQuality>90</ai:dataQuality>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI Reasoning Breakthrough",
+        "url": "https://example.com/news/reasoning",
+        "datePublished": "2025-03-10T01:45:00-04:00",
+        "description": "New AI logic techniques.",
+        "author": {
+          "@type": "Organization",
+          "name": "Example News"
+        },
+        "aiModel": ["Grok", "GPT"],
+        "aiContext": "Summarize for developers",
+        "aiDataQuality": 90
+      }
+      </script>
+    </item>
+  </channel>
+</rss>
 ```
 
 ## 🌟 WHY RIZZ?
