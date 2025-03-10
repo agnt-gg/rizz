@@ -1,6 +1,6 @@
 # RIZZ: RSS Information Zone Zapper
 
-Because AI content shouldn't be complicated
+Because consuming content with AI shouldn't be complicated
 
 ## 🎯 WHAT RIZZ IS:
 
