@@ -2,7 +2,7 @@
 
 Because consuming content with AI shouldn't be complicated
 
-> Codename RSS 3.0, Make America RSS Again.
+> Codename: RSS 3.0, Make America RSS Again.
 
 ## 🎯 WHAT RIZZ IS:
 
